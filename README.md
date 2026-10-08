@@ -10,7 +10,7 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 | `privacy.html` | Privacy notice for the website (served at `/privacy`) |
 | `legal.html` | Legal notice (served at `/legal`) |
 | `404.html` | Not-found page |
-| `styles.css` | All styles |
+| `styles.css` | All styles; the pages link it as `/styles.css?v=N`, so bump `N` in every page when it changes (browsers keep it for 4 hours) |
 | `favicon.svg` | Site icon |
 | `_headers` | Security headers for Cloudflare Pages |
 | `og-image.png` | Social card image (1200×630), rendered from `og/og-image.html`; bump `?v=` in the `og:image` and `twitter:image` tags when it changes |
