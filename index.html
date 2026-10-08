@@ -113,41 +113,72 @@
       <div class="window">
         <div class="titlebar">
           <span class="lights" aria-hidden="true"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></span>
+          <span class="tb-btn wide-only" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M9 4v16"/></svg></span>
           <span class="title-text">
-            <b>acme-api ✓</b>
+            <span class="title-row"><b>acme-api</b><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
             <small>Test server · Saved just now</small>
           </span>
           <span class="nav-spacer"></span>
-          <span class="avatar avatar-agent" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>
+          <span class="port-pill wide-only" aria-hidden="true">:3000 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+          <span class="avatar avatar-agent" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg><span class="badge-wait"></span></span>
+          <span class="tb-btn tb-on inspector-only" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M15 4v16"/></svg></span>
         </div>
-        <div class="tabs" aria-hidden="true">
-          <span class="active"><span class="avatar avatar-agent avatar-xs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>claude</span>
-          <span>shell<span class="dot"></span></span>
-        </div>
-        <div class="term">
-          <div class="block">
-            <div class="block-head"><span class="avatar avatar-agent avatar-sm" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span><span class="cmd"><span class="t-dim">$</span> npm test -- retries</span><span class="block-status"><span class="t-fail">✗ exit 1</span><span class="block-time t-dim">8.4 s</span></span></div>
-            <pre>  <span class="t-fail">✕</span> retries a declined payment once (412 ms)
+        <div class="win-body">
+          <div class="win-main">
+            <div class="tabs" aria-hidden="true">
+              <span class="active"><span class="avatar avatar-agent avatar-xs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>claude</span>
+              <span>shell<span class="dot"></span></span>
+              <span class="tab-add">+</span>
+            </div>
+            <div class="term">
+              <div class="sticky-head"><span class="avatar avatar-agent avatar-sm" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span><span class="cmd"><span class="t-dim">$</span> npm test -- retries</span><span class="block-status"><span class="t-fail">✗ exit 1</span><span class="block-time t-dim">8.4 s · 14:31</span><span class="jump" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg></span></span></div>
+              <pre class="loose-out">  <span class="t-fail">✕</span> retries a declined payment once (412 ms)
 Tests: <span class="t-fail">1 failed</span>, <span class="t-ok">23 passed</span>, 24 total</pre>
-          </div>
-          <div class="block">
-            <div class="block-head"><span class="avatar avatar-sm avatar-you" aria-hidden="true">P</span><span class="cmd"><span class="t-dim">$</span> git diff --stat</span><span class="block-status"><span class="t-ok">✓</span><span class="block-time t-dim">0.1 s</span></span></div>
-            <pre> api/retries.ts      | 14 <span class="t-ok">+++++++</span><span class="t-fail">---</span>
+              <div class="block">
+                <div class="block-head"><span class="avatar avatar-sm avatar-you" aria-hidden="true">P</span><span class="cmd"><span class="t-dim">$</span> git diff --stat</span><span class="block-status"><span class="t-ok">✓</span><span class="block-time t-dim">0.1 s · 14:36</span></span></div>
+                <pre> api/retries.ts      | 14 <span class="t-ok">+++++++</span><span class="t-fail">---</span>
  api/retries.spec.ts |  9 <span class="t-ok">+++++</span><span class="t-fail">--</span>
  2 files changed, 15 insertions(+), 8 deletions(-)</pre>
-          </div>
-          <div class="block">
-            <div class="block-head"><span class="avatar avatar-agent avatar-sm" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span><span class="cmd"><span class="t-dim">$</span> claude --continue</span><span class="block-status"><span class="t-run">● running</span></span></div>
-            <div class="prose">
-              <p><span class="t-bright">●</span> Ran the test 40 times: 8 failures, all on the second retry.</p>
-              <p class="indent">The retry delay comes from Date.now(), but the test's fake clock only advances on the first call. I changed api/retries.ts to take the clock as a parameter and updated the spec.</p>
-              <p class="indent t-ok">✓ 40 of 40 runs pass</p>
+              </div>
+              <div class="block">
+                <div class="block-head"><span class="avatar avatar-agent avatar-sm" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span><span class="cmd"><span class="t-dim">$</span> claude --continue</span><span class="block-status"><span class="t-run">● running</span><span class="block-time t-dim">3 min · since 14:37</span></span></div>
+                <div class="prose">
+                  <p><span class="t-bright">●</span> Ran the test 40 times: 8 failures, all on the second retry.</p>
+                  <p class="indent">The retry delay comes from Date.now(), but the test's fake clock only advances on the first call. I changed api/retries.ts to take the clock as a parameter and updated the spec.</p>
+                  <p class="indent t-ok">✓ 40 of 40 runs pass</p>
+                </div>
+                <div class="ask">
+                  <span class="ask-label">Claude Code is asking</span>
+                  <span class="ask-q">Push fix/retries to the remote?</span>
+                  <span class="ask-actions" aria-hidden="true"><span class="ask-yes">Yes, push</span><span class="ask-no">Not yet</span><span class="ask-link wide-only">Answer in the terminal</span></span>
+                  <span class="ask-foot"><span class="avatar avatar-agent avatar-xs" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>Your agent also sent this to your chat. Answer in either place.</span>
+                </div>
+              </div>
             </div>
-            <div class="ask">
-              <span class="ask-label">Claude Code is asking</span>
-              <span class="ask-q">Push fix/retries to the remote?</span>
-              <span class="ask-actions" aria-hidden="true"><span class="ask-yes">Yes, push</span><span class="ask-no">Not yet</span></span>
-              <span class="ask-foot"><span class="avatar avatar-agent avatar-xs" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>Your agent also sent this to your chat. Answer in either place.</span>
+          </div>
+          <div class="inspector" aria-hidden="true">
+            <div class="insp-sec">
+              <span class="insp-h">Where it is</span>
+              <span class="insp-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01"/><path d="M7 16.5h.01"/></svg><span class="insp-text"><b>Running on Test server</b><small>Since 09:12 · moved here from This Mac</small></span></span>
+              <span class="insp-btn">Move To…</span>
+            </div>
+            <div class="insp-sec">
+              <span class="insp-h">Saves</span>
+              <b class="insp-big">Last saved 14:40</b>
+              <span class="save"><span class="save-t">14:40</span><span class="insp-text">Autosave</span></span>
+              <span class="save save-on"><span class="save-t">14:31</span><span class="insp-text">Save point<small>“before retry change”</small></span><span class="insp-btn insp-btn-sm">Revert</span></span>
+              <span class="save"><span class="save-t">09:12</span><span class="insp-text">Arrived from This Mac</span></span>
+              <span class="insp-link">Browse All Saves…</span>
+            </div>
+            <div class="insp-sec">
+              <span class="insp-h">Who’s here</span>
+              <span class="insp-row"><span class="avatar avatar-you">P</span><span class="insp-text">You<small>This Mac</small></span></span>
+              <span class="insp-row"><span class="avatar avatar-agent"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg><span class="badge-wait"></span></span><span class="insp-text">your agent<small>On your behalf · since 14:02</small><small class="t-wait">Waiting for your answer in chat</small></span><span class="insp-btn insp-btn-sm insp-revoke">Revoke</span></span>
+            </div>
+            <div class="insp-sec">
+              <span class="insp-h">Running now</span>
+              <span class="kv"><span class="insp-dim">Tabs</span><span>claude, shell</span></span>
+              <span class="kv"><span class="insp-dim">Ports</span><span class="mono">localhost:3000</span></span>
             </div>
           </div>
         </div>
