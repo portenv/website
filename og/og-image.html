@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>og-image template · Portenv</title>
+<!--
+  Source for /og-image.png (1200×630). Render at exactly 1200×630, for example:
+    chrome --headless=new --window-size=1200,630 --screenshot=og-image.png og/og-image.html
+  Everything sits in a centered 560px column, inside the central 1000×500 and
+  inside the 630×630 square some chat apps crop to.
+  After changing the image, bump ?v= in the og:image and twitter:image tags.
+-->
+<style>
+  html, body { margin: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    background: #fbfbfd; color: #1d1d1f;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card { width: 560px; display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center; }
+  .logo { display: flex; align-items: center; gap: 14px; font-size: 40px; font-weight: 700; letter-spacing: -0.01em; }
+  h1 { margin: 0; font-size: 68px; line-height: 1.05; font-weight: 700; letter-spacing: -0.025em; }
+  p { margin: 0; font-size: 34px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; color: #6e6e73; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M5 20V10l7-6 7 6v10"/><path d="M10 20v-5h4v5"/></svg>
+      Portenv
+    </div>
+    <h1>Resume your work anywhere.</h1>
+    <p>Let your agents work in it for you.</p>
+  </div>
+</body>
+</html>
