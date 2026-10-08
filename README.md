@@ -8,6 +8,7 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 | --- | --- |
 | `index.html` | Home page |
 | `privacy.html` | Privacy notice for the website (served at `/privacy`) |
+| `legal.html` | Legal notice (served at `/legal`) |
 | `404.html` | Not-found page |
 | `styles.css` | All styles |
 | `favicon.svg` | Site icon |

@@ -183,6 +183,7 @@ svg { flex-shrink: 0; }
 .page { max-width: 720px; margin: 0 auto; padding: 72px 20px 96px; display: flex; flex-direction: column; gap: 18px; }
 .page h1 { font-size: clamp(32px, 4vw, 44px); line-height: 1.1; letter-spacing: -0.02em; }
 .page p, .page li { color: var(--text-2); }
+.page .page-h2 { margin-top: 14px; font-size: 21px; font-weight: 600; }
 
 @media (max-width: 720px) {
   .wide-only { display: none !important; }
