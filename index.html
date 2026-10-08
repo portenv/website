@@ -56,48 +56,58 @@
     <p class="fineprint">Free · macOS 26 or later · Apple silicon</p>
   </section>
 
-  <section class="strip wrap" aria-label="Agents Portenv is made for">
-    <span class="strip-label">Made for agents with their own computers:</span>
-    <span class="chip">Grok Bot</span>
-    <span class="chip">ChatGPT Dots</span>
-    <span class="chip">Meta Muse</span>
-    <span class="strip-tail">and any agent that can open a terminal.</span>
+  <section class="strip wrap" aria-label="Agents Portenv is built for">
+    <p class="strip-text">Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse.</p>
   </section>
 
-  <section class="showcase" aria-label="Portenv window showing an agent continuing your work on a server">
+  <section class="showcase" aria-label="Portenv window where your agent's coding tool asks a question, which also arrives in your chat">
     <figure>
       <div class="window">
         <div class="titlebar">
           <span class="lights" aria-hidden="true"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></span>
           <span class="title-text">
             <b>acme-api ✓</b>
-            <small>Moved from MacBook to build-server · Saved just now</small>
+            <small>Test server · Saved just now</small>
           </span>
           <span class="nav-spacer"></span>
-          <span class="avatar" aria-hidden="true">R</span>
+          <span class="avatar avatar-agent" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>
         </div>
         <div class="tabs" aria-hidden="true">
-          <span>you</span>
-          <span class="active"><span class="dot"></span>research-agent</span>
+          <span class="active"><span class="avatar avatar-agent avatar-xs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>claude</span>
+          <span>shell<span class="dot"></span></span>
         </div>
         <div class="term">
-          <div class="t-dim">research-agent is continuing your work</div>
-          <div> </div>
-          <div><span class="t-path">~/acme-api</span> $ npm test -- retries</div>
-          <div><span class="t-fail">FAIL</span> api/retries.spec.ts</div>
-          <div>  ✕ retries a declined payment once</div>
-          <div class="t-dim">→ editing api/retries.ts</div>
-          <div><span class="t-path">~/acme-api</span> $ npm test -- retries</div>
-          <div><span class="t-ok">PASS</span> api/retries.spec.ts</div>
-          <div> </div>
-          <div class="t-ask">? Push fix/retries to the remote?</div>
-          <div class="t-dim">  waiting for your answer…</div>
+          <div class="block">
+            <div class="block-head"><span class="avatar avatar-agent avatar-sm" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span><span class="cmd"><span class="t-dim">$</span> npm test -- retries</span><span class="block-status"><span class="t-fail">✗ exit 1</span><span class="block-time t-dim">8.4 s</span></span></div>
+            <pre>  <span class="t-fail">✕</span> retries a declined payment once (412 ms)
+Tests: <span class="t-fail">1 failed</span>, <span class="t-ok">23 passed</span>, 24 total</pre>
+          </div>
+          <div class="block">
+            <div class="block-head"><span class="avatar avatar-sm avatar-you" aria-hidden="true">P</span><span class="cmd"><span class="t-dim">$</span> git diff --stat</span><span class="block-status"><span class="t-ok">✓</span><span class="block-time t-dim">0.1 s</span></span></div>
+            <pre> api/retries.ts      | 14 <span class="t-ok">+++++++</span><span class="t-fail">---</span>
+ api/retries.spec.ts |  9 <span class="t-ok">+++++</span><span class="t-fail">--</span>
+ 2 files changed, 15 insertions(+), 8 deletions(-)</pre>
+          </div>
+          <div class="block">
+            <div class="block-head"><span class="avatar avatar-agent avatar-sm" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span><span class="cmd"><span class="t-dim">$</span> claude --continue</span><span class="block-status"><span class="t-run">● running</span></span></div>
+            <div class="prose">
+              <p><span class="t-bright">●</span> Ran the test 40 times: 8 failures, all on the second retry.</p>
+              <p class="indent">The retry delay comes from Date.now(), but the test's fake clock only advances on the first call. I changed api/retries.ts to take the clock as a parameter and updated the spec.</p>
+              <p class="indent t-ok">✓ 40 of 40 runs pass</p>
+            </div>
+            <div class="ask">
+              <span class="ask-label">Claude Code is asking</span>
+              <span class="ask-q">Push fix/retries to the remote?</span>
+              <span class="ask-actions" aria-hidden="true"><span class="ask-yes">Yes, push</span><span class="ask-no">Not yet</span></span>
+              <span class="ask-foot"><span class="avatar avatar-agent avatar-xs" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>Your agent also sent this to your chat. Answer in either place.</span>
+            </div>
+          </div>
         </div>
       </div>
       <figcaption class="chat">
         <span class="chat-head">
-          <span class="avatar" aria-hidden="true">R</span>
-          <span class="chat-who"><b>research-agent</b><small>in your chat app</small></span>
+          <span class="avatar avatar-agent" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="11" height="8.5" rx="2.5"/><path d="M8 5V2.5"/><path d="M6 9.2h.01"/><path d="M10 9.2h.01"/></svg></span>
+          <span class="chat-who"><b>your agent</b><small>in your chat</small></span>
         </span>
         <span class="chat-msg">Tests pass on build-server. OK to push the fix to fix/retries?</span>
         <span class="chat-actions" aria-hidden="true">
@@ -159,7 +169,7 @@
       <li><b>Watch any agent live</b><span>See its terminal as it works.</span></li>
       <li><b>Take over in one click</b><span>Your keyboard wins, always.</span></li>
       <li><b>Revoke instantly</b><span>Access ends, sessions close.</span></li>
-      <li><b>Every change attributed</b><span>History shows who did what.</span></li>
+      <li><b>Every command attributed</b><span>See who ran what, right in the terminal.</span></li>
     </ul>
   </section>
 

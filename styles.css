@@ -72,10 +72,8 @@ svg { flex-shrink: 0; }
 .hero .btn-row { margin-top: 6px; }
 
 /* Agent strip */
-.strip { padding-bottom: 8px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 14px; }
-.strip-label { font-size: 15px; font-weight: 600; }
-.chip { display: inline-flex; align-items: center; min-height: 38px; padding: 0 16px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line-strong); font-size: 15px; font-weight: 600; }
-.strip-tail { font-size: 15px; color: var(--text-3); }
+.strip { padding-bottom: 8px; text-align: center; }
+.strip-text { font-size: 15px; color: var(--text-3); }
 
 /* Window figure */
 .showcase { max-width: 1020px; margin: 0 auto; padding: 48px 20px 96px; }
@@ -88,17 +86,39 @@ svg { flex-shrink: 0; }
 .title-text b { font-size: 13px; font-weight: 600; }
 .title-text small { font-size: 11px; color: #a1a1a6; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .avatar { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: #5e5ce6; color: #fff; font-size: 11px; font-weight: 600; flex-shrink: 0; }
+.avatar svg { width: 62%; height: 62%; }
+.avatar-sm { width: 16px; height: 16px; font-family: var(--sans); font-size: 9px; font-weight: 700; }
+.avatar-xs { width: 14px; height: 14px; }
+.avatar-you { background: #48484a; }
 .tabs { display: flex; height: 30px; background: #232325; border-bottom: 1px solid #000; font-size: 12px; }
 .tabs > span { flex: 1 1 0; display: flex; align-items: center; justify-content: center; gap: 6px; color: #a1a1a6; }
 .tabs > span + span { border-left: 1px solid #000; }
 .tabs .active { background: #1c1c1e; color: #f5f5f7; font-weight: 500; }
 .dot { width: 7px; height: 7px; border-radius: 50%; background: #30d158; }
-.term { padding: 18px 20px 52px; font-family: var(--mono); font-size: clamp(11px, 1.3vw, 13px); line-height: 1.75; color: #e4e4e7; overflow-x: auto; }
-.term div { white-space: pre; }
+.term { padding: 14px 14px 52px; display: flex; flex-direction: column; gap: 10px; font-family: var(--mono); font-size: clamp(11px, 1.3vw, 13px); line-height: 1.6; color: #e4e4e7; overflow-x: auto; }
+.term pre { margin: 0; font: inherit; color: #c7c7cc; white-space: pre; }
+.prose { display: flex; flex-direction: column; gap: 1.6em; color: #c7c7cc; }
+.prose p { margin: 0; }
+.prose p:first-child { padding-left: 2ch; text-indent: -2ch; }
+.prose .indent { padding-left: 2ch; }
+.block { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; border-radius: 8px; background: #1f1f22; }
+.block-head { display: flex; align-items: center; gap: 10px; color: #f5f5f7; }
+.cmd { white-space: nowrap; }
+.block-status { margin-left: auto; display: flex; gap: 12px; white-space: nowrap; }
 .t-dim { color: #8e8e93; }
-.t-path, .t-ok { color: #7ee2a8; }
+.t-ok { color: #7ee2a8; }
 .t-fail { color: #ff8a80; }
-.t-ask { color: #ffd60a; }
+.t-run { color: #64d2ff; }
+.t-bright { color: #f5f5f7; }
+
+.ask { display: flex; flex-direction: column; gap: 10px; max-width: 520px; margin-top: 6px; padding: 12px 14px; border-radius: 10px; background: #2c2c2f; border: 1px solid #48484a; font-family: var(--sans); font-size: 13px; line-height: 1.4; }
+.ask-label { font-size: 11px; font-weight: 600; color: #a1a1a6; }
+.ask-q { font-size: 14px; font-weight: 600; color: #f5f5f7; }
+.ask-actions { display: flex; gap: 8px; }
+.ask-actions span { display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border-radius: 6px; }
+.ask-yes { background: #0a84ff; color: #fff; font-weight: 600; }
+.ask-no { background: #3a3a3d; color: #f5f5f7; }
+.ask-foot { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #a1a1a6; }
 
 .chat {
   align-self: flex-end; width: min(100%, 360px); margin: -28px 20px 0 0; position: relative;
@@ -171,8 +191,14 @@ svg { flex-shrink: 0; }
   .section { padding-top: 64px; padding-bottom: 64px; gap: 36px; }
   .showcase { padding-bottom: 64px; }
   .chat { margin-right: 10px; }
+  .block-time { display: none; }
   .mode { padding: 24px; }
   .download-inner { padding-top: 64px; padding-bottom: 64px; }
+}
+
+@media (max-width: 440px) {
+  .term { padding-left: 10px; padding-right: 10px; font-size: 10px; }
+  .block { padding-left: 10px; padding-right: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
