@@ -8,10 +8,15 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 | --- | --- |
 | `index.html` | Home page |
 | `privacy.html` | Privacy notice for the website (served at `/privacy`) |
+| `legal.html` | Legal notice (served at `/legal`) |
 | `404.html` | Not-found page |
 | `styles.css` | All styles |
 | `favicon.svg` | Site icon |
 | `_headers` | Security headers for Cloudflare Pages |
+| `og-image.png` | Social card image (1200×630), rendered from `og/og-image.html`; bump `?v=` in the `og:image` and `twitter:image` tags when it changes |
+| `og/og-image.html` | Template for `og-image.png` |
+| `llms.txt` | Plain-text summary of Portenv for language models |
+| `robots.txt`, `sitemap.xml` | Crawler rules and the list of pages |
 
 ## Preview locally
 

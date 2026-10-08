@@ -1,0 +1,25 @@
+# Portenv
+
+> Encrypted, portable workspaces for developers and their agents. Each project gets a workspace ("box") that moves between your Mac, your own servers and the cloud, and that agents with their own computers can work in, on your terms.
+
+## What it is
+
+- A native Mac app.
+- Open-source core: the runner, the in-box agent and the save format are Apache-2.0.
+- Works with your own servers and storage, without a Portenv account.
+
+## Agents
+
+- Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse.
+- Connections start with SSH and a CLI with a published skill.
+
+## Links
+
+- [Website](https://portenv.com)
+- [Source code](https://github.com/portenv/portenv)
+- [Privacy](https://portenv.com/privacy)
+- [Legal notice](https://portenv.com/legal)
+
+## Publisher
+
+- EverydayMoney SAS, Paris ([everydaymoney.eu](https://everydaymoney.eu))
