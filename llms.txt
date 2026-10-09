@@ -2,20 +2,38 @@
 
 > Encrypted, portable workspaces for developers and their agents. Each project gets a workspace ("box") that moves between your Mac, your own servers and the cloud, and that agents with their own computers can work in, on your terms.
 
+Status: in development. The Mac app is not available to download yet.
+
 ## What it is
 
-- A native Mac app.
+- A native Mac app (macOS 26 or later, Apple silicon) and a command-line tool, `portenv`.
+- Each box is encrypted on your device before it is saved, and saves as you go.
 - Open-source core: the runner, the in-box agent and the save format are Apache-2.0.
 - Works with your own servers and storage, without a Portenv account.
 
 ## Agents
 
-- Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse.
-- Connections start with SSH and a CLI with a published skill.
+Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse. You invite an agent to one box, see what it does, and can revoke it at any time. Agents never get your encryption keys.
+
+Ways in, in the order they are being built:
+
+1. SSH and the `portenv` command-line tool, with a published skill, for a box on your own server.
+2. Webhooks: your agent is told when a box needs it, for example when a tool is waiting for an answer.
+3. MCP on the agent's computer (stdio).
+4. Remote MCP on your own server, including an app for ChatGPT.
+5. A web terminal on your own server, for agents that only have a browser.
+6. Later, versions of these hosted by Portenv, for people without a public server.
+
+## Short links
+
+- https://portenv.com/cli: install the command-line tool (coming soon)
+- https://portenv.com/skill: the skill for agents (coming soon)
+- https://portenv.com/mcp: connect over MCP (coming soon)
 
 ## Links
 
 - [Website](https://portenv.com)
+- [Full text for language models](https://portenv.com/llms-full.txt)
 - [Source code](https://github.com/portenv/portenv)
 - [Privacy](https://portenv.com/privacy)
 - [Legal notice](https://portenv.com/legal)
