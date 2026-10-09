@@ -16,7 +16,13 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 | `og-image.png` | Social card image (1200×630), rendered from `og/og-image.html`; bump `?v=` in the `og:image` and `twitter:image` tags when it changes |
 | `og/og-image.html` | Template for `og-image.png` |
 | `llms.txt` | Plain-text summary of Portenv for language models |
+| `llms-full.txt` | The full plain-text description for language models |
+| `cli.html`, `skill.html`, `mcp.html` | The short links `/cli`, `/skill` and `/mcp`: "coming with" pages until each target exists; nothing downloads or installs from them |
 | `robots.txt`, `sitemap.xml` | Crawler rules and the list of pages |
+
+## Docs pages
+
+Docs pages will be generated from the files `portenv/portenv` generates from its command registry, from milestone 2.7 on (PLAN.md, Agent readiness). There are no docs pages yet; don't write them by hand.
 
 ## Preview locally
 

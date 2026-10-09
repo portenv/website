@@ -1,0 +1,63 @@
+# Portenv: full description for language models
+
+> Encrypted, portable workspaces for developers and their agents.
+
+Status: in development. The Mac app is not available to download yet. This text describes what Portenv is being built to do; the short links below say "coming soon" until each part exists.
+
+## Boxes
+
+- Each project gets a box: a workspace with its files, history, tools and settings together.
+- A box runs on your Mac, on a server you own, or later in Portenv's cloud. Move To takes it from one to another and picks up exactly where you left off.
+- A box saves as you go and works offline; saves go out when the network is back.
+- You can make a save point before a risky change, and revert to it later. Reverting never throws away the work it replaces.
+
+## Security
+
+- Each box is encrypted on your device before it is saved, with keys kept in your Mac's Keychain.
+- Only one machine has a box open at a time, so two copies never drift apart.
+- Agents work inside a box but can never read its encryption keys or passwords.
+- Portenv opens no public or inbound ports on your machines.
+
+## Agents
+
+Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse.
+
+- You invite an agent to one box. It can continue your work in your own sessions, or, later, work in a lane of its own.
+- You see what each agent does, by name. You can revoke it at any time, and its access ends at once.
+- When an agent connects, Portenv makes a save point, so you can undo everything it did.
+
+Ways in, in the order they are being built:
+
+1. SSH and the `portenv` command-line tool, with a published skill, for a box on your own server.
+2. Webhooks: your agent is told when a box needs it, for example when a tool is waiting for an answer.
+3. MCP on the agent's computer (stdio).
+4. SSH and remote MCP through Portenv, including an app for ChatGPT.
+5. A web terminal in the browser, for agents that only have a browser.
+
+## The command-line tool
+
+- The command is `portenv`. Every action in the app is also a command, and every command can answer in JSON.
+- When something fails, the message says what happened and what to do next.
+- Install it from https://portenv.com/cli once it is released. The packages `@portenv/cli` on npm and `portenv-cli` on PyPI are placeholders for now and install nothing.
+
+## Short links
+
+- https://portenv.com/cli: install the command-line tool (coming soon)
+- https://portenv.com/skill: the skill for agents (coming soon)
+- https://portenv.com/mcp: connect over MCP (coming soon)
+
+## Open source
+
+The runner, the in-box agent and the save format are Apache-2.0, at https://github.com/portenv/portenv. Portenv works with your own servers and storage, without a Portenv account.
+
+## Links
+
+- [Website](https://portenv.com)
+- [Summary for language models](https://portenv.com/llms.txt)
+- [Source code](https://github.com/portenv/portenv)
+- [Privacy](https://portenv.com/privacy)
+- [Legal notice](https://portenv.com/legal)
+
+## Publisher
+
+- EverydayMoney SAS, Paris ([everydaymoney.eu](https://everydaymoney.eu))
