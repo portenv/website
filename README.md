@@ -22,7 +22,7 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 
 ## Docs pages
 
-Docs pages will be generated from the files `portenv/portenv` generates from its command registry, from milestone 2.7 on (PLAN.md, Agent readiness). There are no docs pages yet; don't write them by hand.
+Docs pages will be generated from the files `portenv/portenv` generates from its command registry, from milestone 2.4 on (PLAN.md, Agent readiness). There are no docs pages yet; don't write them by hand.
 
 ## Preview locally
 

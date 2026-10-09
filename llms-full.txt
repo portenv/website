@@ -31,8 +31,9 @@ Ways in, in the order they are being built:
 1. SSH and the `portenv` command-line tool, with a published skill, for a box on your own server.
 2. Webhooks: your agent is told when a box needs it, for example when a tool is waiting for an answer.
 3. MCP on the agent's computer (stdio).
-4. SSH and remote MCP through Portenv, including an app for ChatGPT.
-5. A web terminal in the browser, for agents that only have a browser.
+4. Remote MCP on your own server, including an app for ChatGPT.
+5. A web terminal on your own server, for agents that only have a browser.
+6. Later, versions of these hosted by Portenv, for people without a public server.
 
 ## The command-line tool
 
