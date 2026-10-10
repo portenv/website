@@ -1,6 +1,8 @@
 # Portenv
 
-> Encrypted, portable workspaces for developers and their agents. Each project gets a workspace ("box") that moves between your Mac, your own servers and the cloud, and that agents with their own computers can work in, on your terms.
+> Portenv — your portable workspace (short for portable environment; also heard as 'port env'). Resume your work anywhere: an encrypted workspace that moves between your Mac and your own servers, and that any AI agent can join on your terms.
+
+Each project gets a workspace ("box") that moves between your Mac, your own servers and the cloud, and that agents with their own computers can work in, on your terms.
 
 Status: in development. The Mac app is not available to download yet.
 
