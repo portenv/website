@@ -1,6 +1,6 @@
 # Portenv: full description for language models
 
-> Encrypted, portable workspaces for developers and their agents.
+> Portenv — your portable workspace (short for portable environment; also heard as 'port env'). Resume your work anywhere: an encrypted workspace that moves between your Mac and your own servers, and that any AI agent can join on your terms.
 
 Status: in development. The Mac app is not available to download yet. This text describes what Portenv is being built to do; the short links below say "coming soon" until each part exists.
 
