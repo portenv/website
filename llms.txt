@@ -30,3 +30,4 @@ Works with agents that run in a terminal, such as Claude Code, and with agents o
 ## Publisher
 
 - EverydayMoney SAS, Paris ([everydaymoney.eu](https://everydaymoney.eu))
+- A joint project of Orchestrate Global ([orchestrate.global](https://orchestrate.global/)) and EverydayMoney
