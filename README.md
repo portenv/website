@@ -13,11 +13,11 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 | `styles.css` | All styles; the pages link it as `/styles.css?v=N`, so bump `N` in every page when it changes (browsers keep it for 4 hours) |
 | `favicon.svg` | Site icon |
 | `_headers` | Security headers for Cloudflare Pages |
+| `_redirects` | `/download` and `/appcast.xml`: redirects to the latest GitHub release's `Portenv.dmg` and `appcast.xml` (the app's update feed is always `https://portenv.com/appcast.xml`) |
 | `og-image.png` | Social card image (1200×630), rendered from `og/og-image.html`; bump `?v=` in the `og:image` and `twitter:image` tags when it changes |
 | `og/og-image.html` | Template for `og-image.png` |
 | `llms.txt` | Plain-text summary of Portenv for language models |
 | `llms-full.txt` | The full plain-text description for language models |
-| `cli.html`, `skill.html`, `mcp.html` | The short links `/cli`, `/skill` and `/mcp`: "coming with" pages until each target exists; nothing downloads or installs from them |
 | `robots.txt`, `sitemap.xml` | Crawler rules and the list of pages |
 
 ## Docs pages

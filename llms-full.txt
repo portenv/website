@@ -2,12 +2,15 @@
 
 > Portenv — your portable workspace (short for portable environment; also heard as 'port env'). Resume your work anywhere: an encrypted workspace that moves between your Mac and your own servers, and that any AI agent can join on your terms.
 
-Status: in development. The Mac app is not available to download yet. This text describes what Portenv is being built to do; the short links below say "coming soon" until each part exists.
+Status: Available for Mac (macOS 26 or later, Apple silicon). Download: https://portenv.com/download
+
+This text describes what the released app does. Each release's notes say what is in it: https://github.com/portenv/portenv/releases/latest
 
 ## Boxes
 
 - Each project gets a box: a workspace with its files, history, tools and settings together.
-- A box runs on your Mac, on a server you own, or later in Portenv's cloud. Move To takes it from one to another and picks up exactly where you left off.
+- A box runs on your Mac or on a server you own. Move To takes it from one to another and picks up exactly where you left off.
+- On the Mac, boxes run in Docker Desktop for now.
 - A box saves as you go and works offline; saves go out when the network is back.
 - You can make a save point before a risky change, and revert to it later. Reverting never throws away the work it replaces.
 
@@ -22,30 +25,9 @@ Status: in development. The Mac app is not available to download yet. This text 
 
 Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse.
 
-- You invite an agent to one box. It can continue your work in your own sessions, or, later, work in a lane of its own.
+- You invite an agent to one box. It continues your work in your own sessions.
 - You see what each agent does, by name. You can revoke it at any time, and its access ends at once.
 - When an agent connects, Portenv makes a save point, so you can undo everything it did.
-
-Ways in, in the order they are being built:
-
-1. SSH and the `portenv` command-line tool, with a published skill, for a box on your own server.
-2. Webhooks: your agent is told when a box needs it, for example when a tool is waiting for an answer.
-3. MCP on the agent's computer (stdio).
-4. Remote MCP on your own server, including an app for ChatGPT.
-5. A web terminal on your own server, for agents that only have a browser.
-6. Later, versions of these hosted by Portenv, for people without a public server.
-
-## The command-line tool
-
-- The command is `portenv`. Every action in the app is also a command, and every command can answer in JSON.
-- When something fails, the message says what happened and what to do next.
-- Install it from https://portenv.com/cli once it is released. The packages `@portenv/cli` on npm and `portenv-cli` on PyPI are placeholders for now and install nothing.
-
-## Short links
-
-- https://portenv.com/cli: install the command-line tool (coming soon)
-- https://portenv.com/skill: the skill for agents (coming soon)
-- https://portenv.com/mcp: connect over MCP (coming soon)
 
 ## Open source
 
@@ -54,6 +36,8 @@ The runner, the in-box agent and the save format are Apache-2.0, at https://gith
 ## Links
 
 - [Website](https://portenv.com)
+- [Download for Mac](https://portenv.com/download)
+- [Release notes](https://github.com/portenv/portenv/releases/latest)
 - [Summary for language models](https://portenv.com/llms.txt)
 - [Source code](https://github.com/portenv/portenv)
 - [Privacy](https://portenv.com/privacy)
