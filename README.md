@@ -13,6 +13,8 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 | `styles.css` | All styles; the pages link it as `/styles.css?v=N`, so bump `N` in every page when it changes (browsers keep it for 4 hours) |
 | `favicon.svg` | Site icon (the app icon, "Two places") |
 | `favicon-64.png` | PNG fallback and Apple touch icon |
+| `logo.svg` | Brand icon at small sizes (header), the app icon's simplified drawing |
+| `icon.svg` | Brand icon at larger sizes (download section, social card) |
 | `_headers` | Security headers for Cloudflare Pages |
 | `_redirects` | `/download` and `/appcast.xml`: redirects to the latest GitHub release's `Portenv.dmg` and `appcast.xml` (the app's update feed is always `https://portenv.com/appcast.xml`) |
 | `og-image.png` | Social card image (1200×630), rendered from `og/og-image.html`; bump `?v=` in the `og:image` and `twitter:image` tags when it changes |
