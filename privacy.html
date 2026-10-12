@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://portenv.com/privacy">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Privacy · Portenv">
-<meta property="og:description" content="Encrypted workspaces that move between your Mac, your servers and the cloud, and that your agents can work in, on your terms.">
+<meta property="og:description" content="Encrypted workspaces that move between your Mac and your own servers, and that your agents can work in, on your terms.">
 <meta property="og:image" content="https://portenv.com/og-image.png?v=1">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,7 +20,7 @@
 <meta property="og:image:alt" content="Portenv: resume your work anywhere">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy · Portenv">
-<meta name="twitter:description" content="Encrypted workspaces that move between your Mac, your servers and the cloud, and that your agents can work in, on your terms.">
+<meta name="twitter:description" content="Encrypted workspaces that move between your Mac and your own servers, and that your agents can work in, on your terms.">
 <meta name="twitter:image" content="https://portenv.com/og-image.png?v=1">
 <meta name="twitter:image:alt" content="Portenv: resume your work anywhere">
 <link rel="stylesheet" href="/styles.css?v=2">
@@ -46,17 +46,8 @@
   </ul>
 
   <h2 class="page-h2">The app's update check</h2>
-  <p>The Portenv app checks for updates at most once a day, and only on days you open a box. The check sends no identifier of any kind: no install ID, no account, nothing about your work, your boxes' names or their files.</p>
-  <p>With “Count me in usage numbers” on, the check also carries these fields, and nothing else:</p>
-  <ul>
-    <li>the app's version, your macOS version and your Mac's architecture;</li>
-    <li>the month Portenv was installed (for example October 2026);</li>
-    <li>whether this is the first check of the week, and of the month;</li>
-    <li>once a week: whether a box was moved that week, whether an agent worked in a box that week, how many boxes you have (1, 2–5 or 6 or more) and how many servers are connected (0, 1, 2–3 or 4 or more).</li>
-  </ul>
-  <p>The check goes to portenv.com, which sends the app on to GitHub for the update feed and the download. portenv.com keeps only totals for each field, never a record of each check, and no IP addresses. Cloudflare, which hosts portenv.com, and GitHub see your IP address in transit, as described in <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a> and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
-  <p>To stop counting, untick “Count me in usage numbers” on the Welcome screen, or later in Portenv's Settings. The update check itself stays on, so you still get security updates.</p>
-  <p>Responsible for this counting: EverydayMoney SAS, 60 Rue François 1er, 75008 Paris, France (RCS Paris 944 681 634). Contact: contact@everydaymoney.eu</p>
+  <p>The app checks portenv.com for updates. That request is redirected to GitHub, which serves the update feed and the download (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a> applies there). Portenv counts nothing.</p>
+  <p>The check is a plain request for the update feed. It carries the app's name and version and the version of Sparkle, the update library, and nothing else: no identifier, no account, nothing about your Mac or your work. Like any web request, it reaches Cloudflare, which hosts portenv.com, and GitHub with your IP address.</p>
 
   <p><a href="/">← Back to Portenv</a></p>
 </main>

@@ -1,6 +1,6 @@
 # Portenv: full description for language models
 
-> Portenv — your portable workspace (short for portable environment; also heard as 'port env'). Resume your work anywhere: an encrypted workspace that moves between your Mac and your own servers, and that any AI agent can join on your terms.
+> Portenv — your portable workspace (short for portable environment; also heard as 'port env'). Resume your work anywhere: an encrypted workspace that moves between your Mac and your own servers, and that your agents can join, on your terms.
 
 Status: Available for Mac (macOS 26 or later, Apple silicon). Download: https://portenv.com/download
 
@@ -23,7 +23,7 @@ This text describes what the released app does. Each release's notes say what is
 
 ## Agents
 
-Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse.
+Works with agents that run in a terminal, such as Claude Code, and with agents on their own computers over SSH (Preview, off until you turn it on).
 
 - You invite an agent to one box. It continues your work in your own sessions.
 - You see what each agent does, by name. You can revoke it at any time, and its access ends at once.
