@@ -4,15 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy · Portenv</title>
-<meta name="description" content="How the portenv.com website handles your data.">
+<meta name="description" content="How the portenv.com website and the Portenv app's update check handle your data.">
 <link rel="canonical" href="https://portenv.com/privacy">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/favicon-64.png">
 <meta property="og:site_name" content="Portenv">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://portenv.com/privacy">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Privacy · Portenv">
-<meta property="og:description" content="Encrypted workspaces that move between your Mac, your servers and the cloud, and that your agents can work in, on your terms.">
+<meta property="og:description" content="Encrypted workspaces that move between your Mac and your own servers, and that your agents can work in, on your terms.">
 <meta property="og:image" content="https://portenv.com/og-image.png?v=1">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,7 +22,7 @@
 <meta property="og:image:alt" content="Portenv: resume your work anywhere">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy · Portenv">
-<meta name="twitter:description" content="Encrypted workspaces that move between your Mac, your servers and the cloud, and that your agents can work in, on your terms.">
+<meta name="twitter:description" content="Encrypted workspaces that move between your Mac and your own servers, and that your agents can work in, on your terms.">
 <meta name="twitter:image" content="https://portenv.com/og-image.png?v=1">
 <meta name="twitter:image:alt" content="Portenv: resume your work anywhere">
 <link rel="stylesheet" href="/styles.css?v=2">
@@ -38,12 +40,26 @@
 
 <main class="page">
   <h1>Privacy</h1>
-  <p>This page covers the portenv.com website.</p>
+  <p>This page covers the portenv.com website and the Portenv app's update check.</p>
   <ul>
     <li>The website sets no cookies and runs no analytics or tracking.</li>
     <li>It loads nothing from other sites: no fonts, scripts or images from third parties.</li>
     <li>It is hosted on Cloudflare Pages. To deliver and protect the site, Cloudflare processes technical data such as your IP address, as described in <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</li>
   </ul>
+
+  <h2 class="page-h2">The app's update check</h2>
+  <p>The app checks portenv.com for updates. That request is redirected to GitHub, which serves the update feed and the download (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a> applies there). Portenv counts nothing.</p>
+  <p>The check is a plain request for the update feed. It carries the app's name and version and the version of Sparkle, the update library, and nothing else: no identifier, no account, nothing about your Mac or your work. Like any web request, it reaches Cloudflare, which hosts portenv.com, and GitHub with your IP address.</p>
+
+  <h2 class="page-h2">Portenv-hosted test servers</h2>
+  <p>During the design test, a tester who has no server of their own can use one we run for them. It is one machine for that tester alone, at Amazon Web Services in the United States (Oregon, us-west-2).</p>
+  <ul>
+    <li><strong>What we hold:</strong> a short handle we choose for you (not your name), the public SSH key you send us, and the machine's address. We never make or hold a private key for you.</li>
+    <li><strong>What's on the machine:</strong> your workspaces while they run there, and your saves. Saves are encrypted with your own recovery key, which we can't read. A workspace that is running on the machine, though, can be seen by whoever runs the machine, which is us.</li>
+    <li><strong>Who is responsible:</strong> EverydayMoney SAS is the controller. Amazon Web Services processes the data for us under its <a href="https://d1.awsstatic.com/legal/aws-dpa/aws-dpa.pdf">Data Processing Addendum</a> and <a href="https://aws.amazon.com/service-terms/">Service Terms</a>. The transfer to the United States relies on the <a href="https://www.dataprivacyframework.gov/">EU-U.S. Data Privacy Framework</a>, and on the standard contractual clauses in AWS's addendum.</li>
+    <li><strong>When it's deleted:</strong> when the test ends, we tell you 14 days ahead. Then the machine and its disk are destroyed. Saves on your Mac are not touched.</li>
+  </ul>
+
   <p><a href="/">← Back to Portenv</a></p>
 </main>
 
@@ -56,7 +72,7 @@
       <a href="https://github.com/portenv/portenv/security">Security</a>
       <a href="/privacy">Privacy</a>
       <a href="/legal">Legal notice</a>
-      <a href="https://everydaymoney.eu">Part of EverydayMoney</a>
+      <span class="credit"><a href="https://orchestrate.global/">Orchestrate Global</a> <span aria-hidden="true">×</span><span class="visually-hidden">and</span> <a href="https://everydaymoney.eu">EverydayMoney</a></span>
     </div>
   </div>
 </footer>

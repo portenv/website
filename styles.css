@@ -212,6 +212,8 @@ svg { flex-shrink: 0; }
 .footer-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
 .footer-row a { color: var(--text-3); }
 .footer-note { font-size: 12px; }
+.credit { white-space: nowrap; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 /* Simple text pages */
 .page { max-width: 720px; margin: 0 auto; padding: 72px 20px 96px; display: flex; flex-direction: column; gap: 18px; }
