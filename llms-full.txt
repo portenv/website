@@ -61,4 +61,4 @@ The runner, the in-box agent and the save format are Apache-2.0, at https://gith
 
 ## Publisher
 
-- EverydayMoney SAS, Paris ([everydaymoney.eu](https://everydaymoney.eu))
+- Made by Orchestrate ([orchestrate.global](https://orchestrate.global/)). Published by EverydayMoney SAS, Paris.

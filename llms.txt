@@ -42,4 +42,4 @@ Ways in, in the order they are being built:
 
 ## Publisher
 
-- EverydayMoney SAS, Paris ([everydaymoney.eu](https://everydaymoney.eu))
+- Made by Orchestrate ([orchestrate.global](https://orchestrate.global/)). Published by EverydayMoney SAS, Paris.
