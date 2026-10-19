@@ -1,6 +1,6 @@
 # Portenv
 
-> Portenv — hire a team of AI agents, keep the keys (Portenv is short for portable environment; also heard as 'port env'). Pick a team of AI agents, give each one a role, and let them build. They work in an encrypted workspace with only the access each job needs, and anything that matters waits for your yes.
+> Portenv — your product, built by a team of AI agents (Portenv is short for portable environment; also heard as 'port env'). Each agent gets a role, its own sealed workspace and its own copy of your code. They build, review and hand work to each other. Anything that matters waits for your yes.
 
 Each project gets an encrypted workspace ("box") that moves between your Mac and your own servers. When you create one, you pick a ready-made team of agents (Starter, App product team or Orchestrate); each agent has its own role, its own user and only the access its job needs, and decisions wait for your answer in Needs you.
 
