@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy · Portenv</title>
-<meta name="description" content="How the portenv.com website handles your data.">
+<meta name="description" content="How the portenv.com website handles your data, and the usage numbers the Portenv app sends if you choose.">
 <link rel="canonical" href="https://portenv.com/privacy">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-64.png" type="image/png" sizes="64x64">
@@ -40,12 +40,27 @@
 
 <main class="page">
   <h1>Privacy</h1>
-  <p>This page covers the portenv.com website.</p>
+  <p>This page covers the portenv.com website and the usage numbers the Portenv app can send.</p>
+  <h2 class="page-h2">The website</h2>
   <ul>
     <li>The website sets no cookies and runs no analytics or tracking.</li>
     <li>It loads nothing from other sites: no fonts, scripts or images from third parties.</li>
     <li>It is hosted on Cloudflare Pages. To deliver and protect the site, Cloudflare processes technical data such as your IP address, as described in <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</li>
   </ul>
+  <h2 class="page-h2" id="usage-numbers">Usage numbers from the app</h2>
+  <p>The Portenv app is counted in usage numbers only if you tick “Count me in usage numbers”. It's off until you tick it, on the first screen and in Settings › Updates, and one click there turns it off again. While it's off, the app sends nothing.</p>
+  <p>While it's on, the app sends one check to portenv.com at most once a day, only on days you open a workspace, with these fields and nothing else:</p>
+  <ul>
+    <li>Portenv's version, the macOS version (only the major one, like 26) and the Mac's architecture;</li>
+    <li>the month you installed Portenv;</li>
+    <li>whether it's the first check this week, and the first this month;</li>
+    <li>once a week: whether a workspace moved, whether an agent worked in a workspace, and rough counts of your workspaces (1, 2–5 or 6+) and connected servers (0, 1, 2–3 or 4+).</li>
+  </ul>
+  <p>Never sent: any ID, your name or email, workspace names, file names or anything in your workspaces. The check sets no cookie.</p>
+  <p>Your IP address is seen in transit but never kept. The check is received by a Cloudflare Worker that reads only these fields and adds one to a daily count for each field's value; its logs are off. Only those daily totals are kept, never a record of a single check. Cloudflare acts as our processor under its data processing agreement, with its EU-US Data Privacy Framework certification as the basis for transfers.</p>
+  <p>Any figure we show outside the company hides counts below 10.</p>
+  <h2 class="page-h2">Who is responsible</h2>
+  <p>EverydayMoney SAS, 60 Rue François 1er, 75008 Paris, France (RCS Paris 944 681 634). Contact: <a href="mailto:contact@everydaymoney.eu">contact@everydaymoney.eu</a>, for questions and objections.</p>
   <p><a href="/">← Back to Portenv</a></p>
 </main>
 
