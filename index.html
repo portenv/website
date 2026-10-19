@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portenv — hire a team of AI agents, keep the keys</title>
-<meta name="description" content="Pick a team of AI agents, give each one a role, and let them build. They work in an encrypted workspace with only the access each job needs, and anything that matters waits for your yes.">
+<title>Portenv — your product, built by a team of AI agents</title>
+<meta name="description" content="Each agent gets a role, its own sealed workspace and its own copy of your code. They build, review and hand work to each other. Anything that matters waits for your yes.">
 <meta name="theme-color" content="#f4f2ec">
 <link rel="canonical" href="https://portenv.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -14,19 +14,19 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://portenv.com/">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Portenv — hire a team of AI agents, keep the keys">
-<meta property="og:description" content="Pick a team of AI agents, give each one a role, and let them build. They work in an encrypted workspace with only the access each job needs, and anything that matters waits for your yes.">
-<meta property="og:image" content="https://portenv.com/og-image.png?v=3">
+<meta property="og:title" content="Portenv — your product, built by a team of AI agents">
+<meta property="og:description" content="Each agent gets a role, its own sealed workspace and its own copy of your code. They build, review and hand work to each other. Anything that matters waits for your yes.">
+<meta property="og:image" content="https://portenv.com/og-image.png?v=4">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Portenv: hire a team of AI agents. Keep the keys.">
+<meta property="og:image:alt" content="Portenv: Your product, built by a team of AI agents.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Portenv — hire a team of AI agents, keep the keys">
-<meta name="twitter:description" content="Pick a team of AI agents, give each one a role, and let them build. They work in an encrypted workspace with only the access each job needs, and anything that matters waits for your yes.">
-<meta name="twitter:image" content="https://portenv.com/og-image.png?v=3">
-<meta name="twitter:image:alt" content="Portenv: hire a team of AI agents. Keep the keys.">
-<link rel="stylesheet" href="/styles.css?v=3">
+<meta name="twitter:title" content="Portenv — your product, built by a team of AI agents">
+<meta name="twitter:description" content="Each agent gets a role, its own sealed workspace and its own copy of your code. They build, review and hand work to each other. Anything that matters waits for your yes.">
+<meta name="twitter:image" content="https://portenv.com/og-image.png?v=4">
+<meta name="twitter:image:alt" content="Portenv: Your product, built by a team of AI agents.">
+<link rel="stylesheet" href="/styles.css?v=4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -57,11 +57,100 @@
       "@id": "https://portenv.com/#app",
       "name": "Portenv",
       "alternateName": "Portenv portable workspace",
-      "description": "Pick a team of AI agents, give each one a role, and let them build. They work in an encrypted workspace with only the access each job needs, and anything that matters waits for your yes.",
+      "description": "Each agent gets a role, its own sealed workspace and its own copy of your code. They build, review and hand work to each other. Anything that matters waits for your yes.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "macOS 26 or later",
       "isAccessibleForFree": true,
       "publisher": { "@id": "https://everydaymoney.eu/#organization" }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://portenv.com/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Portenv?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Mac app for running a team of AI coding agents on your own project. Your project gets an encrypted workspace, each agent works in it as its own user with its own role, and you approve what matters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is it for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Right now, independent developers and small teams who already use AI agents and want them to do more without handing over their machine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which agents and models does it use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "During testing, Claude Code with Anthropic's models. You can set the model for each agent in its agent file. Other agents aren't supported yet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the agents touch my Mac or my files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not outside the workspace. Inside it, each agent has its own copy of your code: it can read your project but not change it, and it doesn't get your sign-ins, SSH keys or git credentials, so it can't push. It can still read files in your project that aren't in git, such as a .env file, so keep secrets out of the project for now. Its work comes back to you as a branch you review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need my own AI subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each agent signs in to Claude Code once, in its own terminal, with your own Claude or Anthropic Console account. Portenv doesn't resell model access. Sharing one sign-in between agents isn't in the tester build yet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my code leave my computer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your workspace runs on your Mac, or on your own server if you move it there. Saves are encrypted on your Mac first. The agents send what they work on to Anthropic, as Claude Code does anywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Portenv is free during testing. Your agents' model use is billed to your own Claude or Anthropic account, as usual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I need to run it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Mac with Apple silicon on macOS 26 or later, Docker Desktop installed and open (Portenv runs workspaces in it for now), and a Claude account for your agents. You don't need a GitHub account; linking GitHub from the app isn't in the tester build yet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Portenv collect data about me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The tester build collects no usage numbers. If Portenv ever counts usage, it will ask you first, and it will never include anything about your work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it open source?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Mac app, the runner, the in-workspace agent and the workspace format are all in one public repository under Apache-2.0."
+      }
     }
   ]
 }
@@ -90,8 +179,8 @@
 
   <section class="hero wrap" aria-labelledby="hero-title">
     <p class="eyebrow">For people who run AI agents on real code</p>
-    <h1 id="hero-title">Hire a team of AI agents. Keep the keys.</h1>
-    <p class="lede">Pick a team, give each agent a role, and let them build. Each one gets its own desk in an encrypted workspace, with only the access its job needs. Anything that matters waits for your yes.</p>
+    <h1 id="hero-title">Your product, built by a team of AI agents.</h1>
+    <p class="lede">Each agent gets a role, its own sealed workspace and its own copy of your code. They build, review and hand work to each other. Anything that matters waits for your yes.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScvbRFXLFoB_UQAdoc3QCLxRPPlnTTHlJjoBNdC1tQsp7a2Tw/viewform" rel="noopener">Join the tester program</a>
       <a class="btn btn-secondary" href="#team">See how a team works</a>
@@ -205,9 +294,55 @@
       </div>
       <div class="pillar">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/></svg>
-        <h3>Open-source core</h3>
-        <p>The runner, the in-workspace agent and the format are Apache-2.0. Read the code that guards your work.</p>
+        <h3>Open source</h3>
+        <p>The Mac app, the runner, the in-workspace agent and the format are Apache-2.0, in one public repository. Read the code that guards your work.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="faq" class="wrap section faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="h2">Questions</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is Portenv?</summary>
+        <p>A Mac app for running a team of AI coding agents on your own project. Your project gets an encrypted workspace, each agent works in it as its own user with its own role, and you approve what matters.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Who is it for?</summary>
+        <p>Right now, independent developers and small teams who already use AI agents and want them to do more without handing over their machine.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which agents and models does it use?</summary>
+        <p>During testing, Claude Code with Anthropic's models. You can set the model for each agent in its agent file. Other agents aren't supported yet.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can the agents touch my Mac or my files?</summary>
+        <p>Not outside the workspace. Inside it, each agent has its own copy of your code: it can read your project but not change it, and it doesn't get your sign-ins, SSH keys or git credentials, so it can't push. It can still read files in your project that aren't in git, such as a .env file, so keep secrets out of the project for now. Its work comes back to you as a branch you review.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need my own AI subscription?</summary>
+        <p>Yes. Each agent signs in to Claude Code once, in its own terminal, with your own Claude or Anthropic Console account. Portenv doesn't resell model access. Sharing one sign-in between agents isn't in the tester build yet.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does my code leave my computer?</summary>
+        <p>Your workspace runs on your Mac, or on your own server if you move it there. Saves are encrypted on your Mac first. The agents send what they work on to Anthropic, as Claude Code does anywhere.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does it cost?</summary>
+        <p>Portenv is free during testing. Your agents' model use is billed to your own Claude or Anthropic account, as usual.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What do I need to run it?</summary>
+        <p>A Mac with Apple silicon on macOS 26 or later, Docker Desktop installed and open (Portenv runs workspaces in it for now), and a Claude account for your agents. You don't need a GitHub account; linking GitHub from the app isn't in the tester build yet.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does Portenv collect data about me?</summary>
+        <p>No. The tester build collects no usage numbers. If Portenv ever counts usage, it will ask you first, and it will never include anything about your work.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is it open source?</summary>
+        <p>Yes. The Mac app, the runner, the in-workspace agent and the workspace format are all in one public repository under Apache-2.0.</p>
+      </details>
     </div>
   </section>
 
