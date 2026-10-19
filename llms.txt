@@ -1,8 +1,8 @@
 # Portenv
 
-> Portenv — your portable workspace (short for portable environment; also heard as 'port env'). Resume your work anywhere: an encrypted workspace that moves between your Mac and your own servers, and that any AI agent can join on your terms.
+> Portenv — your product, built by a team of AI agents (Portenv is short for portable environment; also heard as 'port env'). Each agent gets a role, its own user account and its own copy of your code, inside a workspace sealed off from your Mac. They build, review and hand work to each other. Anything that matters waits for your yes.
 
-Each project gets a workspace ("box") that moves between your Mac, your own servers and the cloud, and that agents with their own computers can work in, on your terms.
+Each project gets an encrypted workspace ("box") that moves between your Mac and your own servers. You pick a ready-made team of agents with one command (Starter, App product team or Orchestrate; choosing it in the app comes next); each agent has its own role, its own user and only the access its job needs, and decisions wait for your answer in Needs you.
 
 Status: in development. The Mac app is not available to download yet.
 
@@ -10,21 +10,20 @@ Status: in development. The Mac app is not available to download yet.
 
 - A native Mac app (macOS 26 or later, Apple silicon) and a command-line tool, `portenv`.
 - Each box is encrypted on your device before it is saved, and saves as you go.
-- Open-source core: the runner, the in-box agent and the save format are Apache-2.0.
+- Open source: the whole public repository, the Mac app included, is Apache-2.0: the app, the runner, the in-box agent and the save format.
 - Works with your own servers and storage, without a Portenv account.
 
 ## Agents
 
-Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse. You invite an agent to one box, see what it does, and can revoke it at any time. Agents never get your encryption keys.
+You invite an agent to one box, see what it does, and can revoke it at any time. Agents never get your encryption keys.
 
 Ways in, in the order they are being built:
 
 1. SSH and the `portenv` command-line tool, with a published skill, for a box on your own server.
 2. Webhooks: your agent is told when a box needs it, for example when a tool is waiting for an answer.
 3. MCP on the agent's computer (stdio).
-4. Remote MCP on your own server, including an app for ChatGPT.
+4. Remote MCP on your own server.
 5. A web terminal on your own server, for agents that only have a browser.
-6. Later, versions of these hosted by Portenv, for people without a public server.
 
 ## Short links
 

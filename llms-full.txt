@@ -1,13 +1,20 @@
 # Portenv: full description for language models
 
-> Portenv — your portable workspace (short for portable environment; also heard as 'port env'). Resume your work anywhere: an encrypted workspace that moves between your Mac and your own servers, and that any AI agent can join on your terms.
+> Portenv — your product, built by a team of AI agents (Portenv is short for portable environment; also heard as 'port env'). Each agent gets a role, its own user account and its own copy of your code, inside a workspace sealed off from your Mac. They build, review and hand work to each other. Anything that matters waits for your yes.
 
 Status: in development. The Mac app is not available to download yet. This text describes what Portenv is being built to do; the short links below say "coming soon" until each part exists.
+
+## Teams
+
+- You pick a ready-made team of agents with one command (choosing it in the app comes next): Starter (a lead, a builder and a reviewer), App product team (engineering, product design, trust and safety, release and DevOps) or Orchestrate (a coordinator, an independent reviewer and parallel builders).
+- You read exactly what each agent is told before you approve it; an agent's model is set by editing its settings.
+- Each agent is its own user with its own copy of the code and only the access its job needs. Agents can't push, and they never get your encryption keys.
+- Decisions land in Needs you; Team activity shows who asked whom for what, in order.
 
 ## Boxes
 
 - Each project gets a box: a workspace with its files, history, tools and settings together.
-- A box runs on your Mac, on a server you own, or later in Portenv's cloud. Move To takes it from one to another and picks up exactly where you left off.
+- A box runs on your Mac or on a server you own. Move To takes it from one to another and picks up exactly where you left off.
 - A box saves as you go and works offline; saves go out when the network is back.
 - You can make a save point before a risky change, and revert to it later. Reverting never throws away the work it replaces.
 
@@ -20,8 +27,6 @@ Status: in development. The Mac app is not available to download yet. This text 
 
 ## Agents
 
-Built for agents with their own computers, like Grok Bot, ChatGPT Dots and Meta Muse.
-
 - You invite an agent to one box. It can continue your work in your own sessions, or, later, work in a lane of its own.
 - You see what each agent does, by name. You can revoke it at any time, and its access ends at once.
 - When an agent connects, Portenv makes a save point, so you can undo everything it did.
@@ -31,9 +36,8 @@ Ways in, in the order they are being built:
 1. SSH and the `portenv` command-line tool, with a published skill, for a box on your own server.
 2. Webhooks: your agent is told when a box needs it, for example when a tool is waiting for an answer.
 3. MCP on the agent's computer (stdio).
-4. Remote MCP on your own server, including an app for ChatGPT.
+4. Remote MCP on your own server.
 5. A web terminal on your own server, for agents that only have a browser.
-6. Later, versions of these hosted by Portenv, for people without a public server.
 
 ## The command-line tool
 
@@ -49,7 +53,7 @@ Ways in, in the order they are being built:
 
 ## Open source
 
-The runner, the in-box agent and the save format are Apache-2.0, at https://github.com/portenv/portenv. Portenv works with your own servers and storage, without a Portenv account.
+The Mac app, the runner, the in-box agent and the save format are Apache-2.0, in one public repository at https://github.com/portenv/portenv. Portenv works with your own servers and storage, without a Portenv account.
 
 ## Links
 
