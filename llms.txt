@@ -10,7 +10,7 @@ Status: in development. The Mac app is not available to download yet.
 
 - A native Mac app (macOS 26 or later, Apple silicon) and a command-line tool, `portenv`.
 - Each box is encrypted on your device before it is saved, and saves as you go.
-- Open-source core: the runner, the in-box agent and the save format are Apache-2.0.
+- Open source: the whole public repository, the Mac app included, is Apache-2.0: the app, the runner, the in-box agent and the save format.
 - Works with your own servers and storage, without a Portenv account.
 
 ## Agents
