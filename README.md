@@ -7,7 +7,7 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 | File | What it is |
 | --- | --- |
 | `index.html` | Home page |
-| `privacy.html` | Privacy notice for the website (served at `/privacy`) |
+| `privacy.html` | Privacy notice for the website and the app's opt-in usage numbers (served at `/privacy`); its field list must match the app's and the counting Worker's (`portenv/portenv`, `tools/counting/`) |
 | `legal.html` | Legal notice (served at `/legal`) |
 | `404.html` | Not-found page |
 | `styles.css` | All styles; the pages link it as `/styles.css?v=N`, so bump `N` in every page when it changes (browsers keep it for 4 hours) |
