@@ -65,4 +65,4 @@ The Mac app, the runner, the in-box agent and the save format are Apache-2.0, in
 
 ## Publisher
 
-- Made by Orchestrate ([orchestrate.global](https://orchestrate.global/)). Published by EverydayMoney SAS, Paris.
+- Made and published by Orchestrate ([orchestrate.global](https://orchestrate.global/)).
