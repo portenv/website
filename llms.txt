@@ -41,4 +41,4 @@ Ways in, in the order they are being built:
 
 ## Publisher
 
-- Made by Orchestrate ([orchestrate.global](https://orchestrate.global/)). Published by EverydayMoney SAS, Paris.
+- Made and published by Orchestrate ([orchestrate.global](https://orchestrate.global/)).
