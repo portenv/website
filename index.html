@@ -26,7 +26,7 @@
 <meta name="twitter:description" content="Claude, ChatGPT, Grok or Meta's agents open the same encrypted workspace, share files and hand work to each other. It moves between your Mac and your own server, and anything that matters waits for your yes.">
 <meta name="twitter:image" content="https://portenv.com/og-image.png?v=5">
 <meta name="twitter:image:alt" content="Portenv: One workspace for all your AI agents.">
-<link rel="stylesheet" href="/styles.css?v=5">
+<link rel="stylesheet" href="/styles.css?v=6">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -88,7 +88,7 @@
       "name": "Which agents and models does it use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "During testing, Claude Code with Anthropic's models; you set each agent's model in its agent file. Support for other agents is planned."
+        "text": "Claude Code agents work in it today; ChatGPT joins through MCP, Grok through the terminal, more as they open up. You set each agent's model in its agent file."
       }
     },
     {
@@ -97,6 +97,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Not outside the workspace. Inside it, each agent has its own copy of your code: it can read your project but not change it, and it doesn't get your sign-ins, SSH keys or git credentials, so it can't push. It can still read files in your project that aren't in git, such as a .env file, so keep secrets out of the project for now. Its work comes back to you as a branch you review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I undo what an agent did?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every workspace keeps encrypted save points. Go back to any earlier one, from your Mac or your server."
       }
     },
     {
@@ -161,8 +169,8 @@
     </a>
     <div class="nav-spacer"></div>
     <div class="nav-links wide-only">
-      <a href="#team">Teams</a>
-      <a href="#control">Control</a>
+      <a href="#move">How it moves</a>
+      <a href="#rules">Control</a>
       <a href="#keys">Security</a>
       <a href="https://github.com/portenv/portenv">GitHub</a>
     </div>
@@ -183,111 +191,111 @@
     <p class="fineprint">Tester build 0.1.0 (233) · 54 MB · macOS 26 or later · Apple silicon · Docker Desktop</p>
   </section>
 
-  <section class="showcase wrap" aria-label="The Team window">
+  <section class="showcase wrap" aria-label="Different agents in one workspace">
     <figure class="team-figure">
-      <div class="tw" role="img" aria-label="The Portenv Team window for an example project, acme-api. A sidebar lists the team: Engineering Lead and Code Writer are working, Code Reviewer needs you, Product Designer and DevOps are idle. Team activity shows the lead asking the writer to move the checkout flow into its own module, the writer handing the change to the reviewer, the reviewer asking for two fixes, and then the reviewer asking you whether to merge the checkout change into main, with Not yet and Merge buttons.">
+      <div class="tw" role="img" aria-label="The Portenv window for an example project, acme-app, on your server, saved 2 minutes ago, with one decision waiting for you. Five agents work in it: Lead on Claude, Writer on Claude Code, Reviewer on ChatGPT, Designer on Meta and Ops on Grok. Activity shows the designer attaching a new checkout screen for the writer, the writer handing a tested branch to the reviewer, the reviewer asking for one fix, and then the reviewer asking you whether to merge the checkout change into main.">
         <div class="tw-titlebar">
           <span class="lights"><span></span><span></span><span></span></span>
-          <b>acme-api</b>
-          <span class="tw-sub">Team</span>
+          <b>acme-app</b>
+          <span class="tw-sub">Your server · Saved 2 min ago</span>
         </div>
         <div class="tw-body">
           <div class="tw-side">
             <div class="tw-needs">
               <b>Needs you · 1</b>
-              <span>Code Reviewer: merge the checkout change?</span>
+              <span>Reviewer: merge the checkout change?</span>
             </div>
-            <span class="tw-h">Team</span>
+            <span class="tw-h">Agents in this workspace</span>
             <ul class="tw-roles">
-              <li><span class="tw-dot tw-dot-work"></span>Engineering Lead<small>working</small></li>
-              <li class="tw-on"><span class="tw-dot tw-dot-work"></span>Code Writer<small>working</small></li>
-              <li><span class="tw-dot tw-dot-ask"></span>Code Reviewer<small>needs you</small></li>
-              <li><span class="tw-dot"></span>Product Designer<small>idle</small></li>
-              <li><span class="tw-dot"></span>DevOps<small>idle</small></li>
+              <li><span class="tw-av">L</span>Lead<small>Claude</small></li>
+              <li class="tw-on"><span class="tw-av">W</span>Writer<small>Claude Code</small></li>
+              <li><span class="tw-av">R</span>Reviewer<small>ChatGPT</small></li>
+              <li><span class="tw-av">D</span>Designer<small>Meta</small></li>
+              <li><span class="tw-av">O</span>Ops<small>Grok</small></li>
             </ul>
           </div>
           <div class="tw-main">
-            <div class="tw-main-h">Team activity</div>
+            <div class="tw-main-h">Activity</div>
             <ol class="tw-feed">
-              <li><span class="tw-time">10:02</span><span><b>Engineering Lead → Code Writer</b>Move the checkout flow into its own module. Done when the checkout tests pass.</span></li>
-              <li><span class="tw-time">10:31</span><span><b>Code Writer → Code Reviewer</b>Ready on its own branch: 4 files, 52 tests passing.</span></li>
-              <li><span class="tw-time">10:40</span><span><b>Code Reviewer → Code Writer</b>Two fixes: handle an empty cart; add a test for a failed payment.</span></li>
-              <li class="tw-feed-you"><span class="tw-time">10:58</span><span><b>Code Reviewer → You</b>Fixes checked, tests pass. Merge the checkout change into main?</span></li>
+              <li><span class="tw-time">09:02</span><span><b>Designer (Meta) → Writer (Claude Code)</b>New checkout screen attached: checkout-v2.png</span></li>
+              <li><span class="tw-time">09:40</span><span><b>Writer (Claude Code) → Reviewer (ChatGPT)</b>Built on its own branch, 52 tests passing. Please review.</span></li>
+              <li><span class="tw-time">10:05</span><span><b>Reviewer (ChatGPT) → Writer</b>One fix: handle an empty cart. Then it's good.</span></li>
+              <li class="tw-feed-you"><span class="tw-time">10:21</span><span><b>Reviewer (ChatGPT) → You</b>Merge the checkout change into main?</span></li>
             </ol>
-            <div class="tw-ask">
-              <span class="tw-ask-q">Code Reviewer asks: <b>merge into main?</b></span>
-              <span class="tw-btn">Not yet</span>
-              <span class="tw-btn tw-btn-primary">Merge</span>
-            </div>
           </div>
         </div>
       </div>
-      <figcaption>Illustration of the Portenv app with an example project.</figcaption>
+      <figcaption>Illustration with an example project. Agent names are their makers' trademarks.</figcaption>
     </figure>
   </section>
 
   <section id="shared" class="wrap section" aria-labelledby="shared-title">
     <div class="intro">
       <h2 id="shared-title" class="h2 h2-wide">Like a shared drive, but for AI work.</h2>
-      <p class="lede">Your project lives in one workspace you own. Every agent you invite works inside it, on the same files, in its own lane, and you see who did what.</p>
     </div>
     <div class="pillars pillars-light">
       <div class="pillar">
         <h3>Bring any agent</h3>
-        <p>Pick the agent and model for each role. Agents from different companies hand work to each other through the workspace, not through you.</p>
+        <p>Invite agents from different companies into the same project. They work on the same files, each in its own lane.</p>
       </div>
       <div class="pillar">
         <h3>Share files and work</h3>
-        <p>Specs, screenshots and branches pass between agents and to you, each attributed, each previewable.</p>
+        <p>Specs, screenshots and branches pass between agents and to you, every one attributed and previewable.</p>
       </div>
       <div class="pillar">
-        <h3>Take it anywhere</h3>
-        <p>Move the whole workspace, agents included, between your Mac and your own server. Closing the window doesn't stop the work.</p>
+        <h3>One place for the truth</h3>
+        <p>No more copying output between chat windows. The work stays in your workspace, not in five different apps.</p>
       </div>
     </div>
   </section>
 
   <section id="team" class="wrap section" aria-labelledby="team-title">
     <div class="intro">
-      <h2 id="team-title" class="h2">Start with a team, not a blank prompt.</h2>
-      <p class="lede">When you create a workspace, pick a ready-made team. Untick roles you don't need, rename them, choose each agent's model. Read exactly what each agent is told before you approve it.</p>
+      <h2 id="team-title" class="h2">Give each agent a role.</h2>
+      <p class="lede">Writer, reviewer, designer, ops: choose which agent fills each role, read exactly what it's told, and approve it. Or start from a ready-made team.</p>
     </div>
-    <div class="teams">
-      <article class="team-card">
-        <h3>Starter</h3>
-        <p>A lead, a builder and a reviewer. Plan, build, check.</p>
-      </article>
-      <article class="team-card">
-        <h3>App product team</h3>
-        <p>Engineering, product design, trust and safety, release and DevOps, for a product with real users.</p>
-      </article>
-      <article class="team-card">
-        <h3>Orchestrate</h3>
-        <p>A coordinator, an independent reviewer and parallel builders. The way Portenv itself is built.</p>
-      </article>
+    <ul class="chips" aria-label="Ready-made teams">
+      <li>Starter · lead, builder, reviewer</li>
+      <li>App product team · 8 roles</li>
+      <li>Orchestrate · coordinator, reviewer, parallel builders</li>
+    </ul>
+  </section>
+
+  <section id="move" class="dark" aria-labelledby="move-title">
+    <div class="wrap section move">
+      <div class="intro">
+        <h2 id="move-title" class="h2">Your workspace moves. Your agents move with it.</h2>
+        <p class="lede">Work on your Mac in the morning, move to your own server at night, and pick it up anywhere. Same files, same history, same agents, still working.</p>
+      </div>
+      <svg class="move-art" role="img" aria-label="A workspace moving from a Mac to a server" viewBox="0 0 360 170">
+        <rect x="10" y="60" width="90" height="90" rx="18" fill="none" stroke="#f5f5f7" stroke-width="12"/>
+        <rect x="260" y="60" width="90" height="90" rx="18" fill="#3a3a3c"/>
+        <path d="M282 90 l20 15 l-20 15" fill="none" stroke="#7ee2a8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M60 50 C 90 0, 270 0, 300 45" fill="none" stroke="#e2572b" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 20"/>
+        <text x="55" y="168" fill="#a1a1a6" font-size="12" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif">Your Mac</text>
+        <text x="305" y="168" fill="#a1a1a6" font-size="12" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif">Your server</text>
+      </svg>
     </div>
   </section>
 
-  <section id="control" class="dark" aria-labelledby="control-title">
-    <div class="wrap section">
-      <h2 id="control-title" class="h2">Your product. Your rules.</h2>
-      <div class="pillars">
-        <div class="pillar">
-          <h3>A desk for every agent</h3>
-          <p>Each agent is its own user with its own copy of the code. Your project folder is never theirs to change.</p>
-        </div>
-        <div class="pillar">
-          <h3>Only the keys the job needs</h3>
-          <p>Agents can't change each other's work. They can't push, and they never see your keys.</p>
-        </div>
-        <div class="pillar">
-          <h3>One inbox for you</h3>
-          <p>Decisions land in Needs you. Answer with a click; the agent carries on.</p>
-        </div>
-        <div class="pillar">
-          <h3>See the whole team</h3>
-          <p>Team activity shows who asked whom for what, in order. Step into any agent's terminal when you want to.</p>
-        </div>
+  <section id="rules" class="wrap section" aria-labelledby="rules-title">
+    <h2 id="rules-title" class="h2">Your product. Your rules.</h2>
+    <div class="pillars pillars-light">
+      <div class="pillar">
+        <h3>Every change, a revision</h3>
+        <p>Encrypted save points. See what changed, and go back to any earlier revision if an agent goes the wrong way.</p>
+      </div>
+      <div class="pillar">
+        <h3>Only the access the job needs</h3>
+        <p>Each agent has its own copy of the code. Agents can't change each other's work, can't push, and never see your keys.</p>
+      </div>
+      <div class="pillar">
+        <h3>One inbox for you</h3>
+        <p>Decisions land in Needs you. Answer with a click; the agent carries on.</p>
+      </div>
+      <div class="pillar">
+        <h3>See who did what</h3>
+        <p>Activity shows which agent asked whom for what, in order. Step into any agent's terminal.</p>
       </div>
     </div>
   </section>
@@ -295,18 +303,12 @@
   <section id="keys" class="wrap section" aria-labelledby="keys-title">
     <div class="intro">
       <h2 id="keys-title" class="h2">Only you hold the keys.</h2>
-      <p class="lede">Your work is encrypted on your own device before it's saved anywhere. Wherever it's stored, nobody else can read it.</p>
     </div>
     <div class="pillars pillars-light">
       <div class="pillar">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
         <h3>Encrypted on your Mac</h3>
         <p>Saves are encrypted before they leave your machine, with a recovery key only you keep.</p>
-      </div>
-      <div class="pillar">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01"/><path d="M7 16.5h.01"/></svg>
-        <h3>Your machines, not someone else's cloud</h3>
-        <p>Workspaces run on your Mac or a server you own. Your GitHub sign-in stays on your Mac; agents never see it.</p>
       </div>
       <div class="pillar">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/></svg>
@@ -329,11 +331,15 @@
       </details>
       <details class="faq-item">
         <summary>Which agents and models does it use?</summary>
-        <p>During testing, Claude Code with Anthropic's models; you set each agent's model in its agent file. Support for other agents is planned.</p>
+        <p>Claude Code agents work in it today; ChatGPT joins through MCP, Grok through the terminal, more as they open up. You set each agent's model in its agent file.</p>
       </details>
       <details class="faq-item">
         <summary>Can the agents touch my Mac or my files?</summary>
         <p>Not outside the workspace. Inside it, each agent has its own copy of your code: it can read your project but not change it, and it doesn't get your sign-ins, SSH keys or git credentials, so it can't push. It can still read files in your project that aren't in git, such as a .env file, so keep secrets out of the project for now. Its work comes back to you as a branch you review.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I undo what an agent did?</summary>
+        <p>Yes. Every workspace keeps encrypted save points. Go back to any earlier one, from your Mac or your server.</p>
       </details>
       <details class="faq-item">
         <summary>Do I need my own AI subscription?</summary>

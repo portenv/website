@@ -99,6 +99,7 @@ svg { flex-shrink: 0; }
 .tw-roles small { margin-left: auto; font-size: 12px; color: var(--text-3); }
 .tw-roles .tw-on { background: #d6e0fa; font-weight: 600; }
 .tw-dot { width: 8px; height: 8px; border-radius: 50%; background: #b9b5a8; flex: none; }
+.tw-av { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--surface); border: 1px solid var(--line-strong); font-size: 11px; font-weight: 600; flex: none; }
 .tw-dot-work { background: #2f9e5b; }
 .tw-dot-ask { background: #d9661f; }
 .tw-main { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; }
@@ -181,3 +182,10 @@ svg { flex-shrink: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Teams as chips, the move band */
+.chips { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li { padding: 10px 16px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line-strong); font-size: 15px; }
+.move { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 40px; }
+.move .intro { flex: 1 1 380px; }
+.move-art { flex: 1 1 300px; max-width: 420px; height: auto; }
