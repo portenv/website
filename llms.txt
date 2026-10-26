@@ -1,10 +1,10 @@
 # Portenv
 
-> Portenv — your product, built by a team of AI agents (Portenv is short for portable environment; also heard as 'port env'). Each agent gets a role, its own user account and its own copy of your code, inside a workspace sealed off from your Mac. They build, review and hand work to each other. Anything that matters waits for your yes.
+> Portenv — one workspace for all your AI agents (Portenv is short for portable environment; also heard as 'port env'). A shared workspace for AI work: Claude, ChatGPT, Grok or Meta's agents open the same encrypted workspace, share files and hand work to each other. It moves between your Mac and your own server, and anything that matters waits for your yes.
 
 Each project gets an encrypted workspace ("box") that moves between your Mac and your own servers. You pick a ready-made team of agents with one command (Starter, App product team or Orchestrate; choosing it in the app comes next); each agent has its own role, its own user and only the access its job needs, and decisions wait for your answer in Needs you.
 
-Status: in development. The Mac app is not available to download yet.
+Status: tester build 0.1.0 (233) is available to download at https://portenv.com/download (macOS 26 or later, Apple silicon, Docker Desktop). Today's build runs Claude Code agents; other agents are planned.
 
 ## What it is
 
@@ -34,6 +34,7 @@ Ways in, in the order they are being built:
 ## Links
 
 - [Website](https://portenv.com)
+- [Download for Mac (tester build)](https://portenv.com/download)
 - [Full text for language models](https://portenv.com/llms-full.txt)
 - [Source code](https://github.com/portenv/portenv)
 - [Privacy](https://portenv.com/privacy)
