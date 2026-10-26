@@ -16,6 +16,7 @@ Plain static HTML and CSS: no framework, no build step, no third-party requests.
 | `logo.svg` | Brand icon at small sizes (header), the app icon's simplified drawing |
 | `icon.svg` | Brand icon at larger sizes (download section, social card) |
 | `_headers` | Security headers for Cloudflare Pages |
+| `_redirects` | `/download` → the tester build's DMG on its GitHub release (302); change it with each release |
 | `og-image.png` | Social card image (1200×630), rendered from `og/og-image.html`; bump `?v=` in the `og:image` and `twitter:image` tags when it changes |
 | `og/og-image.html` | Template for `og-image.png` |
 | `llms.txt` | Plain-text summary of Portenv for language models |

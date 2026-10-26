@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portenv — your product, built by a team of AI agents</title>
-<meta name="description" content="Each agent gets a role, its own user account and its own copy of your code, inside a workspace sealed off from your Mac. They build, review and hand work to each other. Anything that matters waits for your yes.">
+<title>Portenv — one workspace for all your AI agents</title>
+<meta name="description" content="Claude, ChatGPT, Grok or Meta's agents open the same encrypted workspace, share files and hand work to each other. It moves between your Mac and your own server, and anything that matters waits for your yes.">
 <meta name="theme-color" content="#f4f2ec">
 <link rel="canonical" href="https://portenv.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -14,19 +14,19 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://portenv.com/">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Portenv — your product, built by a team of AI agents">
-<meta property="og:description" content="Each agent gets a role, its own user account and its own copy of your code, inside a workspace sealed off from your Mac. They build, review and hand work to each other. Anything that matters waits for your yes.">
-<meta property="og:image" content="https://portenv.com/og-image.png?v=4">
+<meta property="og:title" content="Portenv — one workspace for all your AI agents">
+<meta property="og:description" content="Claude, ChatGPT, Grok or Meta's agents open the same encrypted workspace, share files and hand work to each other. It moves between your Mac and your own server, and anything that matters waits for your yes.">
+<meta property="og:image" content="https://portenv.com/og-image.png?v=5">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Portenv: Your product, built by a team of AI agents.">
+<meta property="og:image:alt" content="Portenv: One workspace for all your AI agents.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Portenv — your product, built by a team of AI agents">
-<meta name="twitter:description" content="Each agent gets a role, its own user account and its own copy of your code, inside a workspace sealed off from your Mac. They build, review and hand work to each other. Anything that matters waits for your yes.">
-<meta name="twitter:image" content="https://portenv.com/og-image.png?v=4">
-<meta name="twitter:image:alt" content="Portenv: Your product, built by a team of AI agents.">
-<link rel="stylesheet" href="/styles.css?v=4">
+<meta name="twitter:title" content="Portenv — one workspace for all your AI agents">
+<meta name="twitter:description" content="Claude, ChatGPT, Grok or Meta's agents open the same encrypted workspace, share files and hand work to each other. It moves between your Mac and your own server, and anything that matters waits for your yes.">
+<meta name="twitter:image" content="https://portenv.com/og-image.png?v=5">
+<meta name="twitter:image:alt" content="Portenv: One workspace for all your AI agents.">
+<link rel="stylesheet" href="/styles.css?v=5">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,10 +50,12 @@
       "@id": "https://portenv.com/#app",
       "name": "Portenv",
       "alternateName": "Portenv portable workspace",
-      "description": "Each agent gets a role, its own user account and its own copy of your code, inside a workspace sealed off from your Mac. They build, review and hand work to each other. Anything that matters waits for your yes.",
+      "description": "Claude, ChatGPT, Grok or Meta's agents open the same encrypted workspace, share files and hand work to each other. It moves between your Mac and your own server, and anything that matters waits for your yes.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "macOS 26 or later",
       "isAccessibleForFree": true,
+      "softwareVersion": "0.1.0 (233)",
+      "downloadUrl": "https://portenv.com/download",
       "publisher": { "@id": "https://orchestrate.global/#organization" }
     }
   ]
@@ -70,7 +72,7 @@
       "name": "What is Portenv?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Mac app for running a team of AI coding agents on your own project. Your project gets an encrypted workspace, each agent works in it as its own user with its own role, and you approve what matters."
+        "text": "A shared workspace for AI work. Your project lives in one encrypted workspace you own; AI agents work in it together, each with its own role and access, and you approve what matters. It runs on your Mac or your own server."
       }
     },
     {
@@ -86,7 +88,7 @@
       "name": "Which agents and models does it use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "During testing, Claude Code with Anthropic's models. You can set the model for each agent in its agent file. Other agents aren't supported yet."
+        "text": "During testing, Claude Code with Anthropic's models; you set each agent's model in its agent file. Support for other agents is planned."
       }
     },
     {
@@ -126,7 +128,7 @@
       "name": "What do I need to run it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Mac with Apple silicon on macOS 26 or later, Docker Desktop installed and open (Portenv runs workspaces in it for now), and a Claude account for your agents. You don't need a GitHub account; linking GitHub from the app isn't in the tester build yet."
+        "text": "A Mac with Apple silicon on macOS 26 or later, Docker Desktop installed and open (Portenv runs workspaces in it for now), and a Claude account for your agents. A GitHub account is optional: sign in from the app to clone and push your own repositories."
       }
     },
     {
@@ -164,21 +166,21 @@
       <a href="#keys">Security</a>
       <a href="https://github.com/portenv/portenv">GitHub</a>
     </div>
-    <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScvbRFXLFoB_UQAdoc3QCLxRPPlnTTHlJjoBNdC1tQsp7a2Tw/viewform" rel="noopener">Join the test</a>
+    <a class="nav-cta" href="/download">Download</a>
   </nav>
 </header>
 
 <main id="top">
 
   <section class="hero wrap" aria-labelledby="hero-title">
-    <p class="eyebrow">For people who run AI agents on real code</p>
-    <h1 id="hero-title">Your product, built by a team of AI agents.</h1>
-    <p class="lede">Each agent gets a role, its own user account and its own copy of your code, inside a workspace sealed off from your Mac. They build, review and hand work to each other. Anything that matters waits for your yes.</p>
+    <p class="eyebrow">A shared workspace for AI work</p>
+    <h1 id="hero-title">One workspace for all your AI agents.</h1>
+    <p class="lede">Claude, ChatGPT, Grok or Meta's agents open the same encrypted workspace, share files and hand work to each other. It moves between your Mac and your own server, and anything that matters waits for your yes.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScvbRFXLFoB_UQAdoc3QCLxRPPlnTTHlJjoBNdC1tQsp7a2Tw/viewform" rel="noopener">Join the tester program</a>
-      <a class="btn btn-secondary" href="#team">See how a team works</a>
+      <a class="btn btn-primary" href="/download">Download for Mac</a>
+      <a class="btn btn-secondary" href="#shared">See how it works</a>
     </div>
-    <p class="fineprint">Free during testing · macOS 26 or later · Apple silicon</p>
+    <p class="fineprint">Tester build 0.1.0 (233) · 54 MB · macOS 26 or later · Apple silicon · Docker Desktop</p>
   </section>
 
   <section class="showcase wrap" aria-label="The Team window">
@@ -224,10 +226,31 @@
     </figure>
   </section>
 
+  <section id="shared" class="wrap section" aria-labelledby="shared-title">
+    <div class="intro">
+      <h2 id="shared-title" class="h2 h2-wide">Like a shared drive, but for AI work.</h2>
+      <p class="lede">Your project lives in one workspace you own. Every agent you invite works inside it, on the same files, in its own lane, and you see who did what.</p>
+    </div>
+    <div class="pillars pillars-light">
+      <div class="pillar">
+        <h3>Bring any agent</h3>
+        <p>Pick the agent and model for each role. Agents from different companies hand work to each other through the workspace, not through you.</p>
+      </div>
+      <div class="pillar">
+        <h3>Share files and work</h3>
+        <p>Specs, screenshots and branches pass between agents and to you, each attributed, each previewable.</p>
+      </div>
+      <div class="pillar">
+        <h3>Take it anywhere</h3>
+        <p>Move the whole workspace, agents included, between your Mac and your own server. Closing the window doesn't stop the work.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="team" class="wrap section" aria-labelledby="team-title">
     <div class="intro">
       <h2 id="team-title" class="h2">Start with a team, not a blank prompt.</h2>
-      <p class="lede">Pick a ready-made team with one command. Choosing it in the app comes next. Read exactly what each agent is told before you approve it.</p>
+      <p class="lede">When you create a workspace, pick a ready-made team. Untick roles you don't need, rename them, choose each agent's model. Read exactly what each agent is told before you approve it.</p>
     </div>
     <div class="teams">
       <article class="team-card">
@@ -255,7 +278,7 @@
         </div>
         <div class="pillar">
           <h3>Only the keys the job needs</h3>
-          <p>A reviewer can read the writer's work but not edit it. Agents can't push, and they never see your keys.</p>
+          <p>Agents can't change each other's work. They can't push, and they never see your keys.</p>
         </div>
         <div class="pillar">
           <h3>One inbox for you</h3>
@@ -282,8 +305,8 @@
       </div>
       <div class="pillar">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01"/><path d="M7 16.5h.01"/></svg>
-        <h3>Close the laptop, keep going</h3>
-        <p>Closing the window doesn't stop the team. Move a workspace to a server you own, keep saves in your own storage, and pick it up anywhere.</p>
+        <h3>Your machines, not someone else's cloud</h3>
+        <p>Workspaces run on your Mac or a server you own. Your GitHub sign-in stays on your Mac; agents never see it.</p>
       </div>
       <div class="pillar">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/></svg>
@@ -298,7 +321,7 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>What is Portenv?</summary>
-        <p>A Mac app for running a team of AI coding agents on your own project. Your project gets an encrypted workspace, each agent works in it as its own user with its own role, and you approve what matters.</p>
+        <p>A shared workspace for AI work. Your project lives in one encrypted workspace you own; AI agents work in it together, each with its own role and access, and you approve what matters. It runs on your Mac or your own server.</p>
       </details>
       <details class="faq-item">
         <summary>Who is it for?</summary>
@@ -306,7 +329,7 @@
       </details>
       <details class="faq-item">
         <summary>Which agents and models does it use?</summary>
-        <p>During testing, Claude Code with Anthropic's models. You can set the model for each agent in its agent file. Other agents aren't supported yet.</p>
+        <p>During testing, Claude Code with Anthropic's models; you set each agent's model in its agent file. Support for other agents is planned.</p>
       </details>
       <details class="faq-item">
         <summary>Can the agents touch my Mac or my files?</summary>
@@ -326,7 +349,7 @@
       </details>
       <details class="faq-item">
         <summary>What do I need to run it?</summary>
-        <p>A Mac with Apple silicon on macOS 26 or later, Docker Desktop installed and open (Portenv runs workspaces in it for now), and a Claude account for your agents. You don't need a GitHub account; linking GitHub from the app isn't in the tester build yet.</p>
+        <p>A Mac with Apple silicon on macOS 26 or later, Docker Desktop installed and open (Portenv runs workspaces in it for now), and a Claude account for your agents. A GitHub account is optional: sign in from the app to clone and push your own repositories.</p>
       </details>
       <details class="faq-item">
         <summary>Does Portenv collect data about me?</summary>
@@ -342,11 +365,12 @@
   <section id="get" class="download" aria-labelledby="get-title">
     <div class="wrap get-inner">
       <div class="get-text">
-        <h2 id="get-title" class="h2">Be one of the first teams.</h2>
-        <p class="lede">Free during testing. Mac app, macOS 26 or later, Apple silicon.</p>
+        <h2 id="get-title" class="h2">Try the tester build.</h2>
+        <p class="lede">Free during testing. Portenv 0.1.0 (233), 54 MB. A Mac with Apple silicon on macOS 26 or later, and Docker Desktop.</p>
+        <p class="fineprint">Signed and notarized by Apple. SHA-256 <code class="sha">3d16c65af1252894d9701da321f047ca567b131994099864db1ae9ca0eb84950</code> · <a href="https://github.com/portenv/portenv/releases/tag/v0.1.0-tester.233">Release notes</a></p>
       </div>
       <div class="btn-row">
-        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScvbRFXLFoB_UQAdoc3QCLxRPPlnTTHlJjoBNdC1tQsp7a2Tw/viewform" rel="noopener">Join the tester program</a>
+        <a class="btn btn-primary" href="/download">Download for Mac</a>
         <a class="btn btn-secondary" href="https://github.com/portenv/portenv">Follow on GitHub</a>
       </div>
     </div>
@@ -365,6 +389,7 @@
       <a href="/legal">Legal notice</a>
       <a href="https://orchestrate.global/">Made by Orchestrate</a>
     </div>
+    <p class="footer-note">Claude, ChatGPT, Grok and Meta are trademarks of their owners. Portenv is not affiliated with them.</p>
   </div>
 </footer>
 
