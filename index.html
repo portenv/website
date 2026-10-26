@@ -101,6 +101,14 @@
     },
     {
       "@type": "Question",
+      "name": "Can I undo what an agent did?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every workspace keeps encrypted save points. Go back to any earlier one, from your Mac or your server."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Do I need my own AI subscription?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -273,12 +281,12 @@
       <h2 id="control-title" class="h2">Your product. Your rules.</h2>
       <div class="pillars">
         <div class="pillar">
-          <h3>A desk for every agent</h3>
-          <p>Each agent is its own user with its own copy of the code. Your project folder is never theirs to change.</p>
+          <h3>Every change, a revision</h3>
+          <p>Your workspace keeps an encrypted history of save points. See what changed, and if an agent goes the wrong way, go back to any earlier revision, on any of your machines.</p>
         </div>
         <div class="pillar">
-          <h3>Only the keys the job needs</h3>
-          <p>Agents can't change each other's work. They can't push, and they never see your keys.</p>
+          <h3>Only the access the job needs</h3>
+          <p>Each agent is its own user with its own copy of the code. Agents can't change each other's work, can't push, and never see your keys.</p>
         </div>
         <div class="pillar">
           <h3>One inbox for you</h3>
@@ -334,6 +342,10 @@
       <details class="faq-item">
         <summary>Can the agents touch my Mac or my files?</summary>
         <p>Not outside the workspace. Inside it, each agent has its own copy of your code: it can read your project but not change it, and it doesn't get your sign-ins, SSH keys or git credentials, so it can't push. It can still read files in your project that aren't in git, such as a .env file, so keep secrets out of the project for now. Its work comes back to you as a branch you review.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I undo what an agent did?</summary>
+        <p>Yes. Every workspace keeps encrypted save points. Go back to any earlier one, from your Mac or your server.</p>
       </details>
       <details class="faq-item">
         <summary>Do I need my own AI subscription?</summary>
