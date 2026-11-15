@@ -2,7 +2,7 @@
 
 > Portenv — one workspace for all your AI agents (Portenv is short for portable environment; also heard as 'port env'). A shared workspace for AI work: Claude, ChatGPT, Grok or Meta's agents open the same encrypted workspace, share files and hand work to each other. It moves between your Mac and your own server, and anything that matters waits for your yes.
 
-Status: tester build 0.1.0 (253) is available to download at https://portenv.com/download (macOS 26 or later, Apple silicon, Docker Desktop). Today's build runs Claude Code agents; other agents are planned. This text describes what Portenv is being built to do; the short links below say "coming soon" until each part exists.
+Status: tester build 0.1.0 (257) is available to download at https://portenv.com/download (macOS 26 or later, Apple silicon, Docker Desktop). Today's build runs Claude Code agents; other agents are planned. This text describes what Portenv is being built to do; the short links below say "coming soon" until each part exists.
 
 ## Teams
 
