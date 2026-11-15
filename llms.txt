@@ -4,7 +4,7 @@
 
 Each project gets an encrypted workspace ("box") that moves between your Mac and your own servers. You pick a ready-made team of agents with one command (Starter, App product team or Orchestrate; choosing it in the app comes next); each agent has its own role, its own user and only the access its job needs, and decisions wait for your answer in Needs you.
 
-Status: tester build 0.1.0 (233) is available to download at https://portenv.com/download (macOS 26 or later, Apple silicon, Docker Desktop). Today's build runs Claude Code agents; other agents are planned.
+Status: tester build 0.1.0 (253) is available to download at https://portenv.com/download (macOS 26 or later, Apple silicon, Docker Desktop). Today's build runs Claude Code agents; other agents are planned.
 
 ## What it is
 
